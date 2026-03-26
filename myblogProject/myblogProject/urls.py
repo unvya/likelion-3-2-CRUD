@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from blog import views
+from experiences import views as expViews
 
 
 urlpatterns = [
@@ -24,6 +25,6 @@ urlpatterns = [
     path ("", views.home, name='home'),
     path("projects/", include("projects.urls")),
     path("experiences/", include("experiences.urls")),
-    path('create/', include("experiences.urls")),
-
+    path('letters/', include("letters.urls")),
+    path('create/', expViews.create, name='create'),
 ]
