@@ -12,7 +12,7 @@ def create(request):
         form = PostModelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('experiences')
     else:
         form = PostModelForm()
     return render(request, 'form_create.html', {'form': form})
