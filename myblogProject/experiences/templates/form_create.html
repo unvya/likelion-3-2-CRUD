@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>실패를 몰래 자랑하다</title>
-  </head>
-  <body>
-    <h1>나의 실패를 자랑합시다</h1>
-    <form action="" method="POST">
-      {% csrf_token %}
-      <table>
-        {{ form.as_table }}
-      </table>
-      <input type="submit" value="자랑하기" />
-    </form>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실패를 몰래 자랑하다</title>
+</head>
+
+<body>
+  <h1>나의 실패를 자랑합시다</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="자랑하기" />
+  </form>
+</body>
+
 </html>
